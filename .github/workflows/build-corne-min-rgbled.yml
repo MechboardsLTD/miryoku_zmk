@@ -1,0 +1,13 @@
+# Copyright 2026
+# https://github.com/linkarzu/zmk-corne-min
+
+name: 'Build Corne Min RGBLED'
+on: workflow_dispatch
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["corne_min_left","corne_min_right"]'
+      shield: '["rgbled_adapter"]'
+      modules: '["MechboardsLTD/zmk-module/corne-min MechboardsLTD/zmk-module/corne-min-rgbled"]'
